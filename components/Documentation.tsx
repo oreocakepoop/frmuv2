@@ -1,5 +1,5 @@
 import React from 'react';
-import { Book, Layout, Code, Database, Shield, FileText, Server, Workflow } from 'lucide-react';
+import { Book, Layout, Code, Database, Server, Workflow } from 'lucide-react';
 
 export const Documentation: React.FC = () => {
   return (
@@ -139,7 +139,7 @@ export const Documentation: React.FC = () => {
                         <ul className="list-disc pl-4 text-xs text-slate-600 space-y-1">
                             <li><strong>normalizeKey(str):</strong> Removes special chars/spaces for fuzzy matching.</li>
                             <li><strong>getStatusColor(status):</strong> Returns Tailwind classes based on keywords.</li>
-                            <li><strong>updateRowInMasterSheet:</strong> Reads local file -> finds row by MID -> updates cells -> writes back to disk.</li>
+                            <li><strong>updateRowInMasterSheet:</strong> Reads local file -&gt; finds row by MID -&gt; updates cells -&gt; writes back to disk.</li>
                         </ul>
                     </div>
                     <div className="border border-slate-200 rounded-lg p-4">
@@ -165,7 +165,7 @@ export const Documentation: React.FC = () => {
                         <h3 className="font-bold text-sm text-slate-700 uppercase tracking-wide mb-3">The "Search Held Merchant" Logic</h3>
                         <ol className="list-decimal pl-5 text-sm text-slate-600 space-y-2">
                             <li>User types in "Search Held Merchant".</li>
-                            <li>App filters loaded databases: <code>databases.filter(d =&gt; d.fileName.includes('hold'))</code>.</li>
+                            <li>App filters loaded databases: <code>{`databases.filter(d => d.fileName.includes('hold'))`}</code>.</li>
                             <li>Autosuggestions are populated <strong>only</strong> from these filtered DBs.</li>
                             <li>User selects a suggestion.</li>
                             <li>App finds the record in databases and maps keys using `FIELD_MAPPINGS`.</li>
